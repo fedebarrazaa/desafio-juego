@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    
+    background-image: url(fondo.png);
+    background-repeat:repeat;
+    background-position: top left;
+    background-color: rgb(255, 255, 255);
+}
+
+.img_manos {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    position: absolute;
+    bottom: 0; 
+}
+
+.img_tijera, .img_mano, .img_papel {
+    background-color: transparent;/**/
+    border: none; 
+    width: 100px;
+    padding: 5px;
+}
+
+img:hover {
+    transform: translateY(-5px);
+    cursor: pointer;
+}
+
+/*MEDIDAS MEDIA QUERY*/
+@media (min-width:700px) {
+    section {
+        font-size: 5px;
+    }
+
+    .img_tijera, .img_papel, .img_mano {
+        margin: 10px;
+        font-size: 100px;
+    }
+}
