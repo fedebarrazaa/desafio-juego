@@ -2,16 +2,20 @@
   "name": "desafio-juego",
   "version": "1.0.0",
   "description": "",
+  "homepage": "https://fedebarrazaa.github.io/desafio-juego",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "parcel src/index.html",
-    "build": "parcel build"
+    "build": "parcel build src/index.html --public-url ./",
+    "predeploy": "pnpm run build",
+    "deploy": "gh-pages -d dist"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "packageManager": "pnpm@10.5.1",
   "devDependencies": {
+    "gh-pages": "^6.3.0",
     "parcel": "^2.16.1"
   }
 }
